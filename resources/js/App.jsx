@@ -1,8 +1,7 @@
 import React from 'react';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import HomeSection from './components/HomeSection';
-// import PrimaryLayout from './components/PrimaryLayout';
+import PrimaryLayout from './layouts/PrimaryLayout';
 
 const darkTheme = createTheme({
   palette: {
@@ -13,6 +12,6 @@ const darkTheme = createTheme({
 export default function App() {
   return <ThemeProvider theme={darkTheme}>
     <CssBaseline />
-    <HomeSection />
+    <PrimaryLayout />
   </ThemeProvider>
 }
