@@ -1,3 +1,8 @@
+/**
+ * this file cannot be run directly, make sure you run it via
+ * npm run serve at the root project directory
+ */
+require('process').chdir('server/'); 
 const express = require('express');
 const app = express();
 const mustacheExpress = require('mustache-express');

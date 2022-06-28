@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch": "webpack --watch --progress --mode=development --stats-error-details"
+    "watch": "webpack --watch --progress --mode=development --stats-error-details",
+    "serve": "node server/index.js"
   },
   "author": "cris@nms.ph",
   "license": "ISC",
