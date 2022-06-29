@@ -11,7 +11,8 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-// import SectionsWrapper from './SectionsWrapper';
+import LeftNavigation from '../components/LeftNavigation';
+import SectionsWrapper from './SectionsWrapper';
 
 const drawerWidth = 240;
 
@@ -110,7 +111,7 @@ export default function PrimaryLayout() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-            HRAPP Utils
+            {env.APP_NAME}
           </Typography>
         </Toolbar>
       </AppBar>
@@ -121,13 +122,11 @@ export default function PrimaryLayout() {
           </IconButton>
         </DrawerHeader>
         <Divider />
-        <div>left top nav go here...</div>
-        {/* <LeftTopNavigation /> */}
+        <LeftNavigation />
       </Drawer>
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
         <DrawerHeader/>
-        <div>sections go here...</div>
-        {/* <SectionsWrapper /> */}
+        <SectionsWrapper />
       </Box>
     </Box>
   );
