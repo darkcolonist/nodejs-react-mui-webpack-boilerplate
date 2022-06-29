@@ -12,5 +12,30 @@ const myEnv = dotenv.config({
   path: envPath
 }).parsed;
 
-console.log('loaded env', myEnv);
-module.exports = myEnv;
+const clientFields = [
+  "APP_NAME",
+  "APP_ENV",
+  "APP_DEBUG",
+  "APP_URL",
+];
+
+// console.log('loaded env', myEnv);
+module.exports = {
+  all : () => {
+    return myEnv;
+  },
+
+  clientFields,
+
+  client : (fields) => {
+    let clientOnly = fields === undefined ? clientFields : fields;
+
+    let envClientObj = {};
+
+    clientOnly.map((el) => {
+      envClientObj[el] = myEnv[el];
+    });
+
+    return envClientObj;
+  },
+}

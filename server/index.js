@@ -27,11 +27,11 @@ app.get('/hello', (req, res) => {
 app.get('/*', (req, res) => {
   // res.sendFile(path.resolve(__dirname + '/index.html'));
   res.render('index', {
-    env: myEnv,
-    envString: JSON.stringify(myEnv)
+    env: myEnv.client(),
+    envString: JSON.stringify(myEnv.client())
   });
 })
 
-app.listen(myEnv.PORT, () => {
-  console.log(`${myEnv.APP_NAME} listening on port ${myEnv.PORT}`)
+app.listen(myEnv.all().APP_PORT, () => {
+  console.log(`${myEnv.all().APP_NAME} listening on port ${myEnv.all().APP_PORT}`)
 });
