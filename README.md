@@ -1,3 +1,3 @@
 # commands
-front-end development `npm run watch`
-back-end development `npm run serve'
+front-end development `npm run watch`<br>
+back-end development `npm run serve`
